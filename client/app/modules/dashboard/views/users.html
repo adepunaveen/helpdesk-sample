@@ -1,0 +1,91 @@
+<!-- <div ng-controller="UserController">
+ -->
+ <section class="content-header">
+
+        <ol class="breadcrumb">
+
+            <!-- <li class="active">Users</li> -->
+        </ol>
+    </section>
+ <section class="content" style="min-height:600px;    padding-bottom: 77px;">
+
+  <div class="panel-body">
+        <md-button aria-label="Add User" class="md-icon-button" ng-click="vm.Adduser()"  data-target="#AddUserModel" style="float:left;margin:5px">
+              <md-tooltip md-direction="bottom" md-visible="tooltipVisible" md-autohide="false">User</md-tooltip>
+                    <md-icon md-font-icon="fa fa-user-plus fa-lg"></md-icon>
+ 		    </md-button>
+
+        </div>
+  <div>
+<md-content>
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: #4a4a4d;
+
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    color: #000;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+
+
+   /* background: #395870;*/
+background: #04172b;
+  /*background: linear-gradient(#49708f, #293f50);*/
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+</style>
+
+
+ <md-table-container>
+  <!-- <table md-table   md-row-select single ng-model="selected" md-progress="promise"> -->
+  <table md-table ng-model="selected" md-progress="promise">
+    <thead md-head md-order="query.order">
+      <tr md-row>
+
+        <!-- <th md-column md-order-by="nameToLower"><span><b>Name</b></span></th> -->
+
+        <th md-column ><span> Name</span></th>
+        <th md-column ><span> Designation</span> </th>
+        <th md-column ><span> Usertype</span></th>
+        <th md-column><span> Operations</span></th>
+
+      </tr>
+    </thead>
+    <tbody md-body>
+
+      <tr md-row md-select="user" md-select-id="firstname" md-auto-select ng-repeat="user in Usersdata" >
+        <td md-cell style="text-transform: capitalize;">{{user.firstname + " " + user.lastname}}</td>
+        <td md-cell>{{user.designation}}</td>
+        <td md-cell>{{user.usertype}}</td>
+        <td md-cell>
+        <md-button aria-label="Delete" class="md-icon-button" ng-click="vm.Deleteuser(user.emailid)"   style="float:left;margin:5px">
+              <md-tooltip md-direction="bottom" md-visible="tooltipVisible" md-autohide="false">Delete User</md-tooltip>
+                    <md-icon md-font-icon="fa fa-user-times fa-lg"></md-icon>
+        </md-button>
+        <md-button aria-label="Modify" class="md-icon-button" ng-click="vm.Modifyuser(user)"   style="float:left;margin:5px">
+              <md-tooltip md-direction="bottom" md-visible="tooltipVisible" md-autohide="false">Modify User</md-tooltip>
+                    <md-icon md-font-icon="fa fa-pencil-square-o fa-lg"></md-icon>
+        </md-button>
+        </td>
+
+     </tr>
+    </tbody>
+  </table>
+</md-table-container>
+
+<!-- <md-table-pagination md-limit="query.count"  md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{Usersdata.count}}"   md-page-select></md-table-pagination> -->
+  </md-content>
+
+<!-- </div>
+ --></section>

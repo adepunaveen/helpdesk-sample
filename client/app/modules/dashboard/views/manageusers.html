@@ -1,0 +1,105 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <!-- <h2>User</h2> -->
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+            <md-icon class="fa fa-times " aria-label="Close dialog"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<form data-ng-submit="submitForm(user);" name="vm.ManageUsersForm" style="width:500px">
+    <md-input-container class="md-icon-float md-block">
+        <label>First Name</label>
+        <md-icon class="fa fa-user"></md-icon>
+        <input type="text" required name="firstname" data-ng-model="user.firstName">
+         <div ng-messages="vm.ManageUsersForm.firstname.$error">
+            <div ng-message="required">First name is required.</div>
+        </div>
+    </md-input-container>
+
+    <md-input-container class="md-icon-float md-block">
+        <label>Last Name</label>
+        <md-icon class="fa fa-user"></md-icon>
+        <input type="text" required name="lastname" data-ng-model="user.lastName">
+        <div ng-messages="vm.ManageUsersForm.lastname.$error">
+            <div ng-message="required">Last name is required.</div>
+        </div>
+
+    </md-input-container>
+
+    <md-input-container class="md-icon-float md-block">
+        <label>Employee Id</label>
+        <md-icon class="fa fa-phone"></md-icon>
+        <input type="text" required name="empid" data-ng-model="user.employeeid" pattern="[0-9]{1,5}">
+        <div ng-messages="vm.ManageUsersForm.empid.$error">
+            <div ng-message="required">ID is required.</div>
+            <span style="color:#dd2c00" class="error" ng-show="vm.ManageUsersForm.empid.$error.pattern">
+        Enter digits and employee id size should be less than 6</span>
+            <!-- <div ng-message-exp="'pattern'">HGH</div> -->
+        </div>
+    </md-input-container>
+
+    <md-input-container class="md-icon-float md-block">
+        <label>Email</label>
+        <md-icon class="fa fa-envelope"></md-icon>
+        <input type="email" required name="email" data-ng-model="user.emailid">
+        <div ng-messages="vm.ManageUsersForm.email.$error">
+            <div ng-message="required">Email id is required.</div>
+            <span style="color:#dd2c00" class="error" ng-show="vm.ManageUsersForm.email.$error.email">
+        Enter valid email id</span>
+            <!-- <div ng-message="email">Invalid email id</div> -->
+        </div> 
+    </md-input-container>
+
+    <md-input-container class="md-icon-float md-block" flex-gt-sm>
+        <label>Active?</label>
+        <md-icon class="fa fa-phone"></md-icon>
+        <md-select required data-ng-model="user.active">
+           <md-optgroup label="Active?">
+                <md-option ng-value="state" ng-repeat="state in states">{{state}}</md-option>
+            </md-optgroup>
+        </md-select>
+    </md-input-container>
+
+    <md-input-container class="md-icon-float md-block" flex-gt-sm>
+        <label>UserType</label>
+        <md-icon class="fa fa-user"></md-icon>
+        <md-select data-ng-model="user.userType">
+            <md-optgroup label="Usertype">
+                <md-option ng-value="item" ng-repeat="item in roles">{{item}}</md-option>
+            </md-optgroup>
+        </md-select>
+    </md-input-container>
+
+        <md-input-container class="md-icon-float md-block" flex-gt-sm>
+        <label>HD UserRole</label>
+        <md-icon class="fa fa-user"></md-icon>
+        <md-select required data-ng-model="user.hdroles" multiple>
+            <md-optgroup label="HDUserRole">
+                <md-option ng-value="hdrole" ng-repeat="hdrole in userhdroles">{{hdrole}}</md-option>
+            </md-optgroup>
+        </md-select>
+    </md-input-container>
+
+
+    <md-input-container class="md-icon-float md-block" required flex-gt-sm>
+        <label>Designation</label>
+        <md-icon class="fa fa-phone"></md-icon>
+        <md-select required data-ng-model="user.role">
+            <md-optgroup label="Active?">
+                <md-option ng-value="designation" ng-repeat="designation in designations">{{designation}}</md-option>
+            </md-optgroup>
+
+        </md-select>
+    </md-input-container>
+
+    <div class="pull-right"> 
+        <md-button class="md-raised md-warn pull-right" type="reset" ng-click="reset(vm.ManageUsersForm)">Clear <i class="fa fa-trash-o"></i></md-button>
+        <md-button class="md-raised md-primary pull-right" type="submit">Save <i class="fa fa-angle-double-right"></i></md-button>
+    </div>
+
+
+
+    </md-content>
+</form>

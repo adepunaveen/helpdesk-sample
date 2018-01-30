@@ -1,0 +1,13 @@
+{
+  "name": "fileUpload",
+  "homepage": "https://github.com/zxjava/fileUpload",
+  "_release": "75fe87dc05",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "75fe87dc05587e945d636ea3195b295c35a0ac78"
+  },
+  "_source": "https://github.com/zxjava/fileUpload.git",
+  "_target": "*",
+  "_originalSource": "fileUpload"
+}

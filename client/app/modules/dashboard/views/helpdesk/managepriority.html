@@ -1,0 +1,124 @@
+﻿<!-- Content Header (Page header) -->
+<section class="content-header" id="mmhelpdesk-container">
+    <!-- <h1>
+        Manage Priority
+    </h1> -->
+    <ol class="breadcrumb" id="mmbreadcrumb">
+        <li><a href="#/app/Home"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Manage Priority</li>
+    </ol>
+</section>
+<!-- Main content -->
+
+<br>
+<br>
+<section class="content">
+
+
+<!--  <md-tabs md-stretch-tabs="always" md-dynamic-height>
+  <md-tab label="Manage Priority"  layout-fill>
+ -->    <md-content layout-fill >
+    <form data-ng-submit="vm.updateCategory();">
+        <md-content style="width:60%;margin-left:20%;" class="autoScroll">
+        	 <md-input-container class="md-block" flex-gt-sm>
+                <label>Category Name</label>
+                <md-select  data-ng-model="vm.category" ng-required="true">
+	                <md-optgroup >
+    	              <md-option ng-repeat="st in vm.categories" value={{st.name}}>
+        	            {{st.name}}
+            	      </md-option>
+                	</md-optgroup>
+                </md-select>
+              </md-input-container>
+
+           <p>Selected Value: <span class="radioValue">{{vm.radio}}</span></p>
+     <md-list>
+      <md-list-item ng-repeat="subcategory in vm.subcategories">
+
+		  		<p>{{subcategory.name}}</p>
+
+ 		  		 <md-radio-group layout="row" ng-model = "subcategory.priority" >
+  				  <md-radio-button value="Low"  >Low</md-radio-button>
+  				  <md-radio-button value="Medium"> Medium </md-radio-button>
+  				  <md-radio-button value="High"> High </md-radio-button>
+ 				  </md-radio-group>
+
+      </md-list-item>
+      </md-list>
+       <div class="pull-left">
+        <md-button md-visible="false"  class="md-raised md-primary" type="submit">Update <i class="fa fa-angle-double-right"></i></md-button>
+      </div>
+
+
+        </md-content>
+    </form>
+
+
+
+
+</md-content>
+<!-- </md-tab>
+
+  <md-tab label="Manage Notifications Time"  layout-fill>
+ -->
+<!--         <form data-ng-submit="vm.updatescheduletime();">
+        <md-content class="autoScroll">
+
+          <md-input-container class="md-block" flex-gt-sm>
+               <label>Maximum Number of Days for Low Priority ticket in Open State</label>
+               <input type="number" min="0" max="5" ng-model="vm.opendaysforlow"/>
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+               <label>Maximum Number of Days for Medium Priority ticket in Open State</label>
+               <input type="number" min="0" max="5" ng-model="vm.opendaysformedium"/>
+          </md-input-container>
+
+
+          <md-input-container class="md-block" flex-gt-sm>
+               <label>Maximum Number of Days for High Priority ticket in Open State</label>
+               <input type="number" min="0" max="5" ng-model="vm.opendaysforhigh"/>
+          </md-input-container>
+
+
+           <md-input-container class="md-block" flex-gt-sm>
+                <label>Maximum Number of Days for Low Priority ticket to be closed</label>
+                <input type="number" min="0" max="5" ng-model="vm.daysforlow"/>
+           </md-input-container>
+
+           <md-input-container class="md-block" flex-gt-sm>
+             <label>Maximum Number of Days for Medium Priority ticket to be closed</label>
+                <input type="number" min="0" max="5" ng-model="vm.daysformedium"/>
+           </md-input-container>
+
+
+           <md-input-container class="md-block" flex-gt-sm>
+             <label>Maximum Number of Days for High Priority ticket to be closed</label>
+                <input type="number" min="0" max="5" ng-model="vm.daysforhigh"/>
+           </md-input-container>
+           <div class="pull-left">
+            <md-button class="md-raised md-primary" type="submit">Update <i class="fa fa-angle-double-right"></i></md-button>
+           </div>
+         </form>
+               </md-content>
+
+ -->
+ <!--   </md-tab>
+
+</md-tabs>
+ -->
+</section>
+
+
+
+
+<style>
+      //unchecked
+      .my-radio md-radio-button , md-radio-button.md-checked ._md-off{
+          border-color: blue;
+      }
+      //checked
+      .my-radio md-radio-button , md-radio-button.md-checked ._md-on{
+          background-color: blue;
+      }
+</style>

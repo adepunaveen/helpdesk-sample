@@ -1,0 +1,65 @@
+<section class="content-header" id="mmhelpdesk-container">
+         <br>
+    <ol class="breadcrumb" id="mmbreadcrumb">
+        <li><a href="#/app/Home"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Configure Notifcations</li>
+    </ol>
+</section>
+<br>
+<section class="content"    style=" border-style: ridge;
+    border-width: 3px;" layout-xs="column">
+<div class="panel-body">
+  	<div class="dataTable_wrapper" data-ng-init="init()">
+        <form data-ng-submit="vm.updatescheduletime();">
+        	<md-content class="autoScroll">
+
+          <md-input-container class="md-block" flex-gt-sm>
+               <label>Maximum Number of Days for Low Priority ticket in Open State</label>
+               <input type="number" min="1" max="5" ng-model="vm.opendaysforlow"/>
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+               <label>Maximum Number of Days for Medium Priority ticket in Open State</label>
+               <input type="number" min="1" max="5" ng-model="vm.opendaysformedium"/>
+          </md-input-container>
+
+
+          <md-input-container class="md-block" flex-gt-sm>
+               <label>Maximum Number of Days for High Priority ticket in Open State</label>
+               <input type="number" min="1" max="5" ng-model="vm.opendaysforhigh"/>
+          </md-input-container>
+
+
+           <md-input-container class="md-block" flex-gt-sm>
+                <label>Maximum Number of Days for Low Priority ticket to be closed</label>
+                <input type="number" min="1" max="5" ng-model="vm.daysforlow"/>
+           </md-input-container>
+
+           <md-input-container class="md-block" flex-gt-sm>
+             <label>Maximum Number of Days for Medium Priority ticket to be closed</label>
+                <input type="number" min="1" max="5" ng-model="vm.daysformedium"/>
+           </md-input-container>
+
+           <md-input-container class="md-block" flex-gt-sm>
+             <label>Maximum Number of Days for High Priority ticket to be closed</label>
+                <input type="number" min="1" max="5" ng-model="vm.daysforhigh"/>
+           </md-input-container>
+
+           <md-input-container class="md-block" flex-gt-sm>
+             <label>Maximum Number of Days for Ticket in Query State</label>
+                <input type="number" min="1" max="5" ng-model="vm.querynotificationdays"/>
+           </md-input-container>
+
+           <md-input-container class="md-block" flex-gt-sm>
+             <label>Maximum Number of Days for Ticket to Auto-Close</label>
+                <input type="number" min="1" max="5" ng-model="vm.autoclosedays"/>
+           </md-input-container>
+
+
+           <div class="pull-left">
+            <md-button class="md-raised md-primary" type="submit">Update <i class="fa fa-angle-double-right"></i></md-button>
+           </div>
+         </form>
+    </div>
+
+</section>

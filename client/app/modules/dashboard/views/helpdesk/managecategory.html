@@ -1,0 +1,143 @@
+﻿<!-- Content Header (Page header) -->
+<style type="text/css">
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+    color: white;
+}
+md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-size: 20px;
+}
+</style>
+<section class="content-header" id="mmhelpdesk-container">
+   
+    <ol class="breadcrumb" id="mmbreadcrumb">
+        <li><a href="#/app/Home"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Manage Category</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+ <md-tabs md-stretch-tabs="always" style ="background-color: #04192b;
+    color: white;" md-dynamic-height>
+  <md-tab style="color : white" label="Create Category" layout-fill>
+    <md-content layout-fill >
+  	            <div ng-cloak class="md-inline-form">
+                  <md-content layout-padding>
+                    <div>
+                      <form data-ng-submit="vm.submitForm();" name="vm.contactForm">
+                          <md-content class="autoScroll">
+
+                          <!-- Category  -->
+                              <md-input-container class="md-block" flex-gt-sm>
+                                <label>Category Name</label>
+                                <input ng-model="vm.message.name" ng-required="true" ng-maxlength="20">
+                              </md-input-container>
+
+
+                              <md-input-container class="md-block" flex-gt-sm>
+                                <label>Category Head</label>
+                                <md-select  data-ng-model="vm.message.head" ng-required="true" >
+                                  <md-option ng-repeat="st in vm.head" value={{st.useremailid}} style="text-transform: capitalize;">
+                                    <!-- {{st.name}} , --> {{st.username}} 
+                                  </md-option>
+                                </md-select>
+                              </md-input-container>
+
+                              <md-input-container class="md-block" flex-gt-sm>
+                                <label>Category Individuals</label>
+                               <md-select  data-ng-model="vm.message.individual" ng-required="true" multiple="true">
+                                <md-option ng-repeat="st in vm.executives" value={{st.useremailid}} style="text-transform: capitalize;">
+                                      <!--  <md-checkbox > --><!-- {{st.useremailid}} --> <!-- </md-checkbox> -->
+                                      {{st.username}} 
+                                  </md-option>
+                                </md-select>
+                              </md-input-container>
+                              <md-input-container class="md-icon-float md-block">
+                                <h5 class="md-subhead">Sub Categories</h5>
+                                <md-chips ng-model="vm.subcategory" readonly="vm.readonly" md-removable="vm.removable"></md-chips>
+                              </md-input-container>
+                            <md-input-container class="md-icon-float md-block">
+                              <md-switch ng-model="vm.autoassign" >
+                                Enable Auto-Assign
+                              </md-switch>
+                             </md-input-container>
+
+
+
+                              <div class="pull-left">
+                                  <md-button class="md-raised md-primary" type="submit">Create <i class="fa fa-angle-double-right"></i></md-button>
+                                  <md-button class="md-raised md-warn" type="reset" ng-click="vm.clearall()">Clear <i class="fa fa-trash-o"></i></md-button>
+                              </div>
+                          </md-content>
+                        </form>
+                    </div>
+                  </md-content>
+
+                </div>
+</md-tab-content>
+  </md-tab>
+  <md-tab style="color: white" label="Edit Category">
+
+     <div ng-cloak class="md-inline-form">
+        <md-content layout-padding>
+          <form data-ng-submit="vm.updateCategory(vm,vm);" name="vm.editForm">
+
+              <md-input-container class="md-block" flex-gt-sm>
+                <label>Category Name</label>
+                <md-select  data-ng-model="vm.editcategory" ng-required="true">
+                  <md-option ng-repeat="(k,st) in vm.categories" value={{k}}>
+                    {{st.name}}
+                  </md-option>
+                </md-select>
+              </md-input-container>
+              <!-- to store the value of category  -->
+              <input type="hidden" data-ng-model="vm.actualcatname">
+              <!--   end -->
+              <md-input-container class="md-block" flex-gt-sm>
+                <label>Category Head</label>
+                <md-select  data-ng-model="vm.edithead" ng-required="true">
+                  <md-option ng-repeat="st in vm.selectedcathead" value={{st.useremailid}} style="text-transform: capitalize;">
+<!--                     {{st.useremailid}} -->
+                    {{st.username}} 
+                  </md-option>
+                </md-select>
+              </md-input-container>
+
+
+              <md-input-container class="md-block" flex-gt-sm>
+                <label>Category Individuals</label>
+                <md-select  data-ng-model="vm.editexecutive" ng-required="true" multiple="true">
+                  <md-option ng-repeat="st in vm.editexecutives" value={{st.useremailid}} style="text-transform: capitalize;">
+                       <!-- <md-checkbox > -->
+                       <!-- {{st.useremailid}} -->
+                       {{st.username}} 
+<!--                        </md-checkbox> -->
+                  </md-option>
+                </md-select>
+              </md-input-container>
+
+              <md-input-container class="md-icon-float md-block">
+                <h5 class="md-subhead">Sub Categories</h5>
+                <md-chips ng-model="vm.editsubcategory" readonly="vm.readonly" md-removable="vm.removable"></md-chips>
+              </md-input-container>
+
+              <md-input-container class="md-icon-float md-block">
+                <md-switch ng-model="vm.editautoassign">
+                  Enable Auto-Assign
+                </md-switch>
+               </md-input-container>
+
+
+              <div class="pull-left">
+                  <md-button class="md-raised md-primary" type="submit">Update <i class="fa fa-angle-double-right"></i></md-button>
+                  <md-button class="md-raised md-warn" ng-click="vm.deleteConfirm($event);" type="button">Delete <i class="fa fa-trash-o"></i></md-button>
+              </div>
+
+          </form>
+        </md-content>
+  </md-tab>
+</md-tabs>
+
+    <!-- row -->
+</section><!-- /.content

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HelpDesk</title>
+  <meta name="description" content="Angular Bootstrap Dashboard"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link href="plugins/angular-material/angular-material.min.css" rel="stylesheet" />
+    <!--CSS-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+   <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+
+   <!--  <link rel="stylesheet" href="css/less/glyphicon.less.css">
+ -->
+   <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link href="css/datatable.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/nga.all.min.css" rel="stylesheet" />
+    <link href="css/themes.css" rel="stylesheet" />
+    <link href="css/dashboard.css" rel="stylesheet" />
+
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="plugins/bootstrap-slider/slider.css" rel="stylesheet" />
+    <link href="css/flexslider.css" rel="stylesheet" />
+    <link href="plugins/owl-carousel/owl.theme.css" rel="stylesheet" />
+    <link href="plugins/owl-carousel/owl.transitions.css" rel="stylesheet" />
+    <link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
+
+
+
+    <link href="css/app.css" rel="stylesheet" />
+
+</head>
+<body ng-app="app" class="hold-transition sidebar-mini {{theme}} {{layout}}">
+    <!--Scripts-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="plugins/bootstrap-slider/bootstrap-slider.js"></script>
+
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap.min.js"></script>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>
+
+    <script src="js/angular-animate.min.js"></script>
+
+    <script src="js/angular-ui-router-min.js"></script>
+    <script src="js/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/i18n/defaults-*.min.js"></script> -->
+
+<!--     <script src="/bower_components/angular/angular.min.js"></script>
+         <script src="js/angular-animate.min.js"></script>
+
+    <script src="/bower_components/angular-ui-routerjs/release/angular-ui-router-min.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+
+ -->
+
+    <script src="plugins/knob/jquery.knob.js"></script>
+    <script src="plugins/Chart.min.js"></script>
+    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="js/angular-material.min.js"></script>
+    <script src="js/angular-aria.min.js"></script>
+    <script src="js/angular-messages.min.js"></script>
+
+    <script src="js/angular-flash.js"></script>
+    <script src="js/angular-sanitize.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.13.0.min.js"></script>
+
+    <!--bower-->
+    <link rel="stylesheet" href="bower_components/c3/c3.css" />
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/d3/d3.js"></script>
+<script src="bower_components/c3/c3.js"></script>
+<script src="bower_components/angular-chart/angular-chart.js"></script>
+<!--<script src="bower_components/angularjs-slider/dist/rzslider.min.js"></script>-->
+
+    <script src="js/angular.js"></script>
+    <script src="js/angular-animate.js"></script>
+    <script src="js/ui-bootstrap-tpls-2.2.0.js"></script>
+
+
+    <!--Common-->
+
+    <script src="app/common/config.js"></script>
+
+     <!--node_modules -->
+     <!--script src="node_modules/angular-chart.js/node_modules/chart.js/src"></script>
+     <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script-->
+
+    <!--main app-->
+    <script src="app/app.js"></script>
+    <script src="app/common/appCtrl.js"></script>
+    <script src="app/services/apiService.js"></script>
+
+    <!--Login Module-->
+    <script src="app/modules/login/loginMgmt.js"></script>
+    <script src="app/modules/login/loginService.js"></script>
+    <script src="app/modules/login/loginCtrl.js"></script>
+
+    <!--Dashboard Module-->
+    <script src="app/modules/dashboard/dashboardApplication.js"></script>
+    <script src="app/modules/dashboard/dashboardService.js"></script>
+        <!-- Controllers -->
+<!--        <script src="app/modules/dashboard/controllers/about.js"></script>
+         <script src="app/modules/dashboard/controllers/achievements.js"></script>
+        <script src="app/modules/dashboard/controllers/contact.js"></script>
+        <script src="app/modules/dashboard/controllers/education.js"></script>
+        <script src="app/modules/dashboard/controllers/experience.js"></script>
+         <script src="app/modules/dashboard/controllers/home.js"></script>
+        <script src="app/modules/dashboard/controllers/skills.js"></script>
+ -->        <script src="app/modules/dashboard/controllers/users.js"></script>
+    <script src="app/modules/dashboard/controllers/manageusers.js"></script>
+
+    <script src="app/modules/dashboard/services/helpdesk/categoryService.js"></script>
+    <script src="app/modules/dashboard/services/helpdesk/createTicketService.js"></script>
+       <script src="app/modules/dashboard/services/manageusersService.js"></script>
+
+
+    <script src="app/modules/dashboard/services/helpdesk/manageuserrolesService.js"></script>
+    <script src="app/modules/dashboard/controllers/helpdesk/manageuserrolesCtrl.js"></script>
+    <script src="app/modules/dashboard/controllers/helpdesk/createTicketCtrl.js"></script>
+    <script src="app/modules/dashboard/controllers/helpdesk/manageCategory.js"></script>
+    <script src="app/modules/dashboard/services/helpdesk/assignticketService.js"></script>
+    <script src="app/modules/dashboard/controllers/helpdesk/assignTicketCtrl.js"></script>
+    <script src="app/modules/dashboard/controllers/helpdesk/hduserhome.js"></script>
+    <script src="app/modules/dashboard/services/helpdesk/hduserhomeservice.js"></script>
+    <script src="app/modules/dashboard/controllers/helpdesk/hdTicketTraceCtrl.js"></script>
+    <script src="app/modules/dashboard/services/helpdesk/myticketsService.js"></script>
+    <script src="app/modules/dashboard/controllers/helpdesk/myTicketsCtrl.js"></script>
+    <script src="app/modules/dashboard/services/helpdesk/ticketstatusupdateService.js"></script>
+    <script src="app/modules/dashboard/controllers/helpdesk/managenotificationCtrl.js"></script>
+    <script src="app/modules/dashboard/directives/fileReader.js"></script>
+
+
+    <script src="app/modules/dashboard/controllers/helpdesk/managePriority.js"></script>
+
+    <script src="app/modules/dashboard/controllers/helpdesk/managegroupticket.js"></script>
+    <script src="app/modules/dashboard/services/helpdesk/manageticketservice.js"></script>
+
+    <!--Logout Module-->
+    <script src="app/modules/logout/logoutMgmt.js"></script>
+    <script src="app/modules/logout/logoutService.js"></script>
+    <script src="app/modules/logout/logoutCtrl.js"></script>
+
+
+    <div flash-message="5000"></div>
+    <ui-view></ui-view>
+
+</body>
+</html>

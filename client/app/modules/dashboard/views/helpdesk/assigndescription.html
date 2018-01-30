@@ -1,0 +1,21 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <!-- <h2>User</h2> -->
+        <span flex>Please Enter Comments</span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+            <md-icon class="fa fa-times " aria-label="Close dialog"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content style="width:400px;height: 200px;"">
+    <md-input-container class="md-icon-float md-block">
+        <label>Comments</label>
+<!--         <md-icon class="fa fa-user"></md-icon> -->
+        <input type="textarea" required name="firstname" data-ng-model="comments">
+    </md-input-container>
+
+    <div class="pull-right"> 
+        <md-button class="md-raised md-primary pull-left" ng-click="submitcomments()">Submit <i class="fa fa-angle-double-right"></i></md-button>
+    </div>
+
+</md-content>

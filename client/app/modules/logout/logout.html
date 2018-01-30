@@ -1,0 +1,131 @@
+﻿<!--
+Author: Siva Kella
+Page Description: Login Page
+Date: 07 Sep 2016
+-->
+
+<header>
+  <nav class="navbar navbar-default navbar-static-top" role="navigation" style="left : 0; top : 0; position : fixed; width : 100%;">
+        <img height=75px src="../../../images/login/MMLogo.jpg"/> 
+
+    <header-notification style="color : #0c79be; font-weight : bold; font-size : 30px; font-family : calibri; padding-left : 25%">
+        <a href="#/app/login">MM Helpdesk</a>
+    </header-notification>      
+    </nav>    
+</header>
+
+<div class="container margin-top-80" style="position : fixed; top : 12%; left : 7%;">
+   <h1> Logged Out! </h1>
+       <h5 style="position : fixed;left : 40%;"> <a href="#/app/login">Click Here to Login to MM-HelpDesk</a> </h5>
+    <!-- <div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2" data-ng-show="vm.signIn">
+        <div class="panel panel-info">
+            <div class="panel-heading text-center">
+                Sign In
+            </div>
+            <div class="panel-body">
+                <form name="vm.loginForm" class="form-horizontal" data-ng-submit="vm.login(vm.getUser);">
+                    <div class="col-xs-12 input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="login-username" type="email" class="form-control" name="username" placeholder="Username" data-ng-model="vm.getUser.Username" required>
+                    </div>
+                    <div class="col-xs-12 input-group margin-top-20">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="login-password" type="password" class="form-control" name="password" placeholder="Password" data-ng-model="vm.getUser.Password" required >
+                    </div>
+                    <div class="col-xs-12 input-group margin-top-20">
+                            <span class="input-group-addon"><b>Login As</b></span>
+                            <select class="form-control" name="usertype" data-ng-model="vm.getUser.userType">
+                                <option value="User">User</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Super Admin">Super Admin</option>
+                            </select>
+                    </div>
+                    <div class="col-xs-12 margin-top-20">
+                        <span class="pull-left">
+                            <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                        </span>
+                        <span class="pull-right">
+                            <a href="#" data-ng-click="vm.signIn=false;vm.forgotPassword=true;">Forgot Password?</a>
+                        </span>
+                    </div>
+                    <div class="col-xs-12 margin-top-20">
+                        <button type="submit" class="btn btn-block btn-success">
+                            Login <span class="glyphicon glyphicon-play"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" data-ng-show="!vm.signIn&&vm.forgotPassword">
+        <div class="panel panel-info">
+            <div class="panel-heading text-left">
+                Forgot Password
+
+                <span class="pull-right">
+                    <a href="#" data-ng-click="vm.signIn=true;vm.forgotPassword=false;">Back to Login</a>
+                </span>
+            </div>
+            
+            <div class="panel-body">
+                <form name="vm.forgotPassword" data-ng-submit="vm.sendPassword();">
+                    <div class="form-group">
+                        <label for="email" class="col-md-12 control-label">Email</label>
+                        <div class="col-md-12">
+                            <input type="email" class="form-control" name="email" placeholder="Email Address" required data-ng-model="vm.setUser.Username">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 margin-top-20">
+                        <div class="col-xs-6 padding-left-none">
+                            <button type="submit" class="btn btn-block btn-success">
+                                Send Password <span class="glyphicon glyphicon-play"></span>
+                            </button>
+                         </div> 
+                    </div>
+                </form>
+            </div>
+        </div> 
+    </div>
+
+    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" data-ng-show="vm.signIn==false&&vm.firstLogin&&!vm.forgotPassword">
+        <div class="panel panel-info">
+            <div class="panel-heading text-left">
+                Change Default Password
+
+                <span class="pull-right">
+                    <a href="#" data-ng-click="vm.signIn=true;vm.forgotPassword=false;">Back to Login</a>
+                </span>
+            </div>
+            
+            <div class="panel-body">
+                <form name="vm.firstLogin" data-ng-submit="vm.changePassword();">
+                    <div class="form-group">
+                        <label for="password" class="col-md-12 control-label margin-top-10">New Password</label>
+                        <div class="col-md-12">
+                            <input type="password" class="form-control" name="password" placeholder="Password" required data-ng-model="vm.setUser.Password">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cpasswd" class="col-md-12 control-label margin-top-10">Confirm Password</label>
+                        <div class="col-md-12">
+                            <input type="password" class="form-control" name="cpasswd" placeholder="Confirm Password" required data-ng-model="vm.setUser.confirmPassword">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 margin-top-20">
+                        <div class="col-xs-6 padding-left-none">
+                            <button type="submit" class="btn btn-block btn-success">
+                                Change Password <span class="glyphicon glyphicon-play"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div> 
+    </div> -->
+
+    <footer class="main-footer" style="left : 0; margin-left : 0; bottom : 0; position : fixed; width : 100%; text-align : center">
+        <strong>Copyright &copy; <a href="http://www.magikminds.com/" target="_blank"> MagikMinds Software Services Pvt Ltd </a>.</strong> All rights reserved.
+    </footer>
+
+</div>
