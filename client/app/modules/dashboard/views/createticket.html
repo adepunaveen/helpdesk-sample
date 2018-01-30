@@ -1,0 +1,217 @@
+﻿<!-- Content Header (Page header) -->
+<style>
+
+
+select.no-radius{
+    /*border:none;*/
+    border-bottom-color: rgb(238,238,238);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 24px;
+    /*box-shadow: inset 2px 2px 2px 2px;*/
+
+}    
+
+select{
+  -webkit-appearance: none;
+  box-shadow: inset 0px 0px 0px 0px;
+  border-radius: 0px;
+  border: none;
+  padding:20px 150px 20px 10px;
+}
+
+.select-wrapper{
+    border: none;
+    border-radius: 0px;
+    data-width="500px";
+}
+
+
+div.test {
+
+    border-radius: 5px;
+    border-style: inset;
+    background-color: rgb(224,224,224);
+
+}
+</style>
+<!--chandana-->
+<!-- <section class="content-header" id="mmhelpdesk-container">
+    <h1>
+        Create Ticket
+    </h1>
+    <ol class="breadcrumb" id="mmbreadcrumb">
+        <li><a href="#/app/Home"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Create Ticket</li>
+    </ol>
+</section> -->
+<!--chandana-->
+<!-- Main content -->
+<section class="content">
+    <!-- row -->
+    
+    <div class="row">
+    <div class="box box-primary">
+    <section class="content-header" id="mmhelpdesk-container">
+   
+    <ol class="breadcrumb" id="mmbreadcrumb">
+        <li><a href="#/app/Home"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Create Ticket</li>
+    </ol>
+</section>
+ <div class="box-body box-profile">
+
+ 
+
+        <div class="col-md-10" style ="padding-top: 20px;">
+
+<!-- Start of creating ticket form -->
+            <div layout="column" ng-cloak class="md-inline-form" style="background-color: rgb(238,238,238); padding-left: 95px; ">
+                  <md-content layout-padding style="
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    border-style: outset;
+    border-radius: 2%;
+    border-color: rgb(59, 156, 78);
+    overflow: hidden;"
+>
+                   <!--  <div class="test"> -->
+                    <md-card class="demo-card demo-basic" style ="margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    border-bottom-width: 0px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    
+    background-color: rgb(250,250,250);">
+                    <md-toolbar style =" background-image: url('../images/images (4).jpg'); background-size : cover; 
+    border-color: #c7b8b8; text-align: center ;min-height: 40px; color: white;"> Create ticket </md-toolbar>
+    <form data-ng-submit="vm.submitForm();" style ="background-color: white;" name="vm.contactForm">
+            <md-input-container class="md-icon-float md-block">
+            <div class = "form group" layout="row">
+                <md-radio-group layout="row" data-ng-model="vm.type" ng-required="true" style ="margin-bottom: 0px;margin-top: 0px;">
+                <!-- <div flex layout='row' layout-padding layout-align="start center" >
+                 <div flex style="width:100px;">
+                  Ticket Type
+                 </div>  -->
+                  <md-radio-button  value="Request" class="md-primary">Request</md-radio-button>
+                  <md-radio-button  value="Compliant"> Compliant </md-radio-button>
+                  <!-- </div> -->
+                </md-radio-group>
+                </div>
+                
+        </md-input-container>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2" >
+          <label> Category</label>
+         </div>
+
+         <div class="col-sm-4" >
+            <!-- <md-input-container class="md-block" flex-gt-sm> -->
+          
+              <span class="select-wrapper">
+                <select  class="form-control no-radius" data-width="auto" data-ng-model="vm.category" ng-required="true">
+                <option value="" selected disabled>Please select</option>                                  
+                    <option ng-repeat="(k,v) in vm.categories" value={{v.name}} >
+                      {{v.name}}
+                    </option>
+                </select>
+              </span>
+        </div>
+        </div>
+        </div>
+
+
+        <br>
+
+
+    <!-- Sub Category -->
+<div class="container">
+<div class="row">
+  <div class="col-sm-2" >
+  <label> Sub-Category</label>
+ </div>
+
+ <div class="col-sm-4" >
+<!-- <md-input-container class="md-block" flex-gt-sm> -->
+  <!-- <label>Choose Sub-Category</label> -->
+  <span class="select-wrapper">
+  <select class="form-control no-radius" data-width="auto" ng-model="vm.subcategory" ng-required="true">
+  <option value="" selected disabled>Please select</option>
+    <option ng-repeat="st in vm.subcategories" value={{st}}>
+      {{st}}
+    </option>
+  </select>
+  </span>
+<!-- </md-input-container> -->
+
+</div>
+</div>
+</div>
+<div class="container">
+ <div class="row">
+  <div class="col-sm-2" >
+  <label> Priority</label>
+ </div>
+
+ <div class="col-sm-4" >
+<!-- <md-input-container class="md-block"  flex-gt-sm> -->
+ <!--  <label>Choose Priority</label> -->
+  <select class="form-control no-radius" data-width="auto"  ng-model="vm.priority" ng-required="true">
+  <option value="" selected disabled>Please select</option>
+    <option ng-repeat="st in vm.priorities" value={{st.name}}>
+      {{st.name}}
+    </option>
+  </select>
+<!-- </md-input-container> -->
+</div>
+</div>
+</div>
+
+<br>
+
+<!-- <md-input-container class="md-block" flex-gt-sm> -->
+
+
+  <input type="file" class="upload" id="fileUpload" accept={{vm.acceptTypes}}  file-reader>
+  <i class="fa fa-upload">
+  </i>
+</input>
+<span>Upload below 5MB file</span>
+
+<!-- </md-input-container> -->
+<md-input-container class="md-block">
+  <label>Description</label>
+  <textarea style="height: 128px" ng-model="vm.message.description" md-maxlength="1000" rows="5" ng-required="true" md-select-on-focus>
+  </textarea>
+</md-input-container>
+<!-- </div>
+<div> -->
+
+<div class="pull-left">
+<md-button class="md-raised md-primary" 
+type="submit">Create<i class="fa fa-angle-double-right"></i></md-button>
+<md-button class="md-raised md-warn" type="reset" ng-click="vm.clearall()">Clear <i class="fa fa-trash-o"></i></md-button>
+</div>
+
+<!--  </md-content> -->
+</form>
+</md-card>
+<!-- </div> -->
+</md-content>
+
+</div>
+<!-- End of Creating ticket form -->
+
+</div>
+</div>
+</div><!-- /.col -->
+</div>
+</section><!-- /.content
