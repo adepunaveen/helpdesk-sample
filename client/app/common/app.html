@@ -1,0 +1,251 @@
+﻿<div class="wrapper">
+    <header class="main-header">
+        <!-- Logo -->
+        <!--chandana-->
+        <!-- <a class="logo" style ="padding-left: 0px; height: 55px; background-image: url('../images/images (4).jpg');"> -->
+
+        <a class="logo" style ="padding-left: 0px; height: 55px;  background: rgb(12, 40, 64);">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><img src="../images/MMMiniLogo.jpg"/></span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><img height=45px src="../../../images/login/MMLogo.jpg"/> </span>
+        </a>
+        <!--chandana-->
+        <!--chandana-->
+        <!-- <a class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <!-- <span class="logo-mini"><b>MM Connect</b></span>
+            <img height=45px src="../../../images/login/MMLogo.jpg"/>  -->
+            <!-- logo for regular state and mobile devices -->
+            <!-- Siva Changes Start: Renamed the dashboard name with MM Connect -->
+            <!-- <span class="logo-lg"><b>MM Connect</b></span> -->
+        <!-- </a> --> 
+        <!--chandana-->
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role= "navigation" style = "background-image: url('../images/images (4).jpg'); background-size : cover; " >
+        <!-- background:rgb(77, 182, 174); background-repeat: repeat;" -->
+        
+
+            <!-- Sidebar toggle button-->
+           <!--  <a class="sidebar-toggle" data-toggle="offcanvas" role="button" data-ng-click="vm.sideBar(1);">
+                <span class="sr-only">Toggle navigation</span>
+            </a> -->
+
+             <label id="header_name"  title="MM HelpDesk" style="font-size: 35px; color: white; text-align: center; margin-left: 374px;">HelpDesk</label>
+
+            <!-- Navbar Right Menu -->
+            <div class= "navbar-custom-menu" >
+                <ul class= "nav navbar-nav"  >
+
+                <!--chandana-->
+                <!-- <li class= "xn-icon-button">
+                <a href="#" class= "x-navigation-minimize">
+                <span class= "fa fa-dedent" >
+                </span>
+                </a>
+                </li> -->
+                <!--chandana-->
+                    <!-- <li class="dropdown notifications-menu hidden-xs hidden-sm">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-align-justify"></i> Layouts
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <ul class="menu">
+                                    <li data-ng-repeat="screen in vm.layouts" data-ng-click="vm.setLayout(screen.layout);">
+                                        <a>
+                                            <i class="fa fa-indent"></i> {{screen.name}}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <!-- <li class="dropdown notifications-menu">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-gears"></i> Themes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <ul class="menu">
+                                    <li data-ng-repeat="theme in vm.themes" data-ng-click="vm.setTheme(theme.color);">
+                                        <a>
+                                            <i class="fa fa-flag{{theme.icon}} text-{{theme.theme}}"></i>{{theme.title}}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li> -->
+
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+
+                       <!--  chandana changes: modified to keep only logout -->
+                           
+                            <!-- Siva Changes: Modified to bind emp ID related pic. -->
+                <!-- <img src="../../images/ranjith.png" class="user-image" alt="User Image"> -->
+                
+                     <!-- chandana-->
+                 <!--    <img src="../../images/empidpics/{{userempid}}.png" class="user-image" alt="User Image"> -->
+                    <!-- chandana-->
+               <!--  End  -->
+                            <!-- Siva Changes: Modified form Static bind variable -->
+                            <!-- chandana-->
+
+                            <span class="hidden-xs" >{{usertype}}</span>&nbsp;
+                            <span class="fa fa-angle-double-down">
+                            </span>
+
+                            <!-- chandana
+                         
+                           <!-- chandana-->
+                        </a>
+                        <ul class="dropdown-menu" style="background-color: rgb(19, 157, 217); color: black; width: 177px;">
+                          <!-- chandana-->
+                           <!--  User image -->
+                              <!-- chandana-->
+                          <!--   <li class="user-header"> -->
+                              <!-- chandana-->
+                                <!-- Siva Changes: Modified to bind emp ID related pic. -->
+                <!-- <img src="../../images/ranjith.png" class="img-circle" alt="User Image"> -->
+                <!-- chandana-->
+               <!--  <div class="row text-center" style =" color:white">
+                        <img src="../../images/empidpics/{{userempid}}.png" class="img-thumbnail img-responsive img-rounded" width="30%" ng-click="triggerUpload()" alt="User Image"/>
+                        <input type="file" onchange="uploadImage(this)" style="display:none" id="fileInput" name="filedata" accept={{imageFileFormats}}/>
+                        </br>
+                        Click on the Profile Picture to Edit
+                     </div>  -->
+                       <!-- chandana-->
+
+                    <!-- <img src="../../images/empidpics/{{userempid}}.png" class="img-circle" alt="User Image"> -->
+                <!-- End  -->
+                                    <!-- Siva Changes: Modified form Static bind variable -->
+                                      <!-- chandana-->
+                                   <!--  <h3>{{usertype}}</h3> -->
+                                <!-- <p class="text-center">
+                                    {{userdesignation}} -->
+                                      <!-- chandana-->
+                                    <!-- End -->
+                                    <!--  <small>Playing in Web - since 2010</small> -->
+
+   <!-- chandana-->                                 
+ <!-- </p>
+                            </li> -->
+                              <!-- chandana-->
+                            <!--  Menu Footer -->
+                              <!-- chandana-->
+                            <li >
+                              <!-- chandana-->
+                               <!--  <div class="pull-left">
+                                    <a ui-sref="app.about" class="btn btn-success btn-flat">About Me</a>
+                                </div> -->
+                                  <!-- chandana-->
+                                   <!-- chandana changes: modified to keep only logout -->
+                                  
+                                 
+                                 <!--  <md-button id="logoutbtn" ui-sref="logout" class="glyphicon glyphicon-share" style="width :10px; height :3px; text-align: left;top: 20px; background-color: rgb(209, 241, 218)">&nbsp;logout</md-button>
+                                  </a>
+                                  </div> -->
+                                
+                               <!--  <a id="logoutbtn" ui-sref="logout" class="waves-effect waves-light btn" style="color: black; width: 76px; height: 38px;margin-top: 20px;margin-left: 89px;margin-right: 80px;    background-color: rgb(28, 175, 154) "> Log Out</a> -->
+
+                               
+
+
+                              <md-button id="changePassword" style="color: white; ">
+                              <span>
+                                    <md-icon md-menu-align-target class="fa fa-key" style="color: #FFFFFF; "></md-icon>
+                                     Change Password 
+                                    </span>
+                                </md-button>
+                                </li>
+
+
+                                <li class="pull-left">
+                               
+                                <md-button id="logoutbtn" ui-sref="logout" class="waves-effect waves-light btn" style="color: #FFFFFF; padding-right: 56px;padding-left: 0px;width: 166px;border-left-width: 0px;">
+                                    <md-icon md-menu-align-target class="fa fa-sign-out" style="color: white; "></md-icon>
+                                   Log Out
+                                </md-button>
+
+                             </li>
+                         <!--    </li> -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar" style="background-color: rgb(210, 214, 222)
+; height: 700px; ">
+        <!-- sidebar -->
+        <section class="sidebar">
+            <!-- Sidebar user panel -->
+            <div id="MMuser-panel" class="user-panel" >
+                <div>
+                <!-- chandana-->
+
+                <!-- chandana-->
+                <!-- Siva Changes: Modified to bind emp ID related pic. -->
+                <!-- <img src="../../images/ranjith.png" class="img-circle" alt="User Image"> -->
+                <!-- chandana-->
+        <img id="profilePic" style="margin-left: 54px;" src="../../images/empidpics/{{profilefilename}}" class="img-rounded" alt="User Image"  width= "94" height="94" align="middle" ng-click="triggerUpload()" title="Click on the Profile Picture to Edit">
+                    <input type="file" onchange="uploadImage(this)" style="display:none" id="fileInput" name="filedata" accept={{imageFileFormats}}/>
+                    </br>
+                    <!-- Click on the Profile Picture to Edit -->
+
+                   <!-- chandana-->
+                <!-- End -->    
+                
+                <div >
+                <!-- Siva Changes: Modified form Static bind variable -->
+                    <p  style=" color: black; " align="middle">{{userflname}}</p>
+                     <p  style=" color: black; " align="middle">{{userdesignation}}</p>
+                    <!-- <p style=" font-weight: 400;
+    color: black;margin-left: 70px;">{{usertype}}</p> -->
+                  <!--   <span style="font-weight: 400;
+    color: black;margin-left: 30px;">{{userdesignation}}</span> -->
+                <!-- End -->
+                </div>
+                </div>
+            </div>
+            <hr style=" margin-bottom: 0px;    margin-top: 0px; border-top: 1px solid #a7c3c5;"/>
+             <ul class="sidebar-menu">
+            <li ng-class="{active: collapseVar==1}" ui-sref-active=app.{{hduserhome}}>{{dropDown}} 
+                <a class="treeview" ui-sref-active="active" ui-sref="app.{{hduserhome}}" ng-click="check(1)" style ="color: rgb(10, 10, 10);"><i class="fa fa-dashboard"></i>&nbsp;Help Desk<span
+                        class="arrow" style="float: right"></span></a>
+                       <!--  <hr style="border-top: 1px solid #a7c3c5;"/> -->
+                <ul class="nav nav-second-level" collapse="collapseVar!=1">
+                    <li class="treeview" ui-sref-active="active" ng-click="vm.sideBar();" data-ng-repeat="menu in vm.menuItems" style ="color: rgb(10, 10, 10);">
+                        <a ui-sref="app.{{menu.state}}">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <i class="fa fa-{{menu.icon}}" style ="color: #0a0a0a;"></i> <span style ="color: #0a0a0a;">&nbsp; {{menu.title}}</span>
+
+                        </a>
+                        <hr style="border-top: 1px solid #a7c3c5; margin-top: 0px;
+    margin-bottom: 0px;"/>
+                    </li>
+                </ul>
+            <!-- </li> -->
+            </ul>                
+              
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <ui-view></ui-view>
+    </div>
+
+     <footer class="main-footer" style="position:fixed;left : 0; margin-left : 0; bottom : 0; width : 100%; text-align :center">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 1.0.0
+            </div>
+            <strong>Copyright &copy; <a href="http://www.magikminds.com/" target="_blank">MagikMinds Software Services Pvt Ltd</a>.</strong> All rights reserved.
+        </footer>
+    </div>
